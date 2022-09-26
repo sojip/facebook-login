@@ -1,0 +1,165 @@
+/* global reinitialisation */
+:root {
+  --wrapper-max-width: 1000px;
+  --gray-color: #e9ebee;
+  /* --blue-color: #4267b3; */
+  --blue-color: #1877f2;
+  --white-blue-color: #4e71ba;
+  --green-color: #42b72a;
+  --white-green-color: #3caa27;
+}
+
+html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* body */
+body {
+  width: 100%;
+  height: 100%;
+  font-family: Helvetica;
+}
+
+.main {
+  width: 100%;
+  height: 100%;
+  padding: 0 2vw;
+  background-color: var(--gray-color);
+}
+
+/* ----main flex wrapper---- */
+.main > .wrapper {
+  width: 100%;
+  height: 100%;
+  max-width: var(--wrapper-max-width);
+  margin: auto;
+  display: flex;
+  align-items: center;
+  gap: 100px;
+}
+
+.main > .wrapper > div:nth-child(1) {
+  flex: 1.4 1 0;
+}
+
+.main > .wrapper > div:nth-child(2) {
+  flex: 1.1 1 0;
+}
+
+/* ----main flex wrapper----- */
+
+.main > .wrapper > div:nth-child(1) h1 {
+  color: var(--blue-color);
+  font-size: 4rem;
+}
+
+.main > .wrapper > div:nth-child(1) > p {
+  font-size: 1.4rem;
+  line-height: 2rem;
+}
+
+.signin-wrapper {
+  border: solid 1px white;
+  padding: 8px 15px;
+  border-radius: 10px;
+  background-color: white;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.signin-wrapper form input {
+  width: 100%;
+  margin-top: 10px;
+  border-radius: 5px;
+  height: 50px;
+  padding: 0 10px;
+  border: solid 1px var(--gray-color);
+  outline-color: var(--blue-color);
+  caret-color: var(--blue-color);
+  font-size: 1.1rem;
+}
+
+.signin-wrapper form input[type="submit"] {
+  background-color: var(--blue-color);
+  cursor: pointer;
+  color: white;
+  font-size: 1.4rem;
+  transition: background-color 300ms;
+  font-weight: bold;
+}
+
+.signin-wrapper form input[type="submit"]:hover {
+  background-color: var(--white-blue-color);
+}
+
+.signin-wrapper a {
+  display: block;
+  width: fit-content;
+  margin: auto;
+  padding: 15px 0;
+  text-transform: capitalize;
+  text-decoration: none;
+}
+
+.signin-wrapper a:hover {
+  text-decoration: underline;
+}
+
+.signin-wrapper #newAccount {
+  display: block;
+  margin: 15px auto;
+  padding: 15px;
+  border-radius: 5px;
+  background-color: var(--green-color);
+  border: none;
+  font-size: 1.1rem;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 300ms;
+}
+
+.signin-wrapper #newAccount:hover {
+  background-color: var(--white-green-color);
+}
+
+.main > .wrapper > div:nth-child(2) > p {
+  margin-top: 15px;
+  text-align: center;
+}
+
+.main > .wrapper > div:nth-child(2) > p span {
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+hr {
+  height: 1px;
+  background-color: var(--gray-color);
+  border: none;
+}
+
+@media screen and (max-width: 800px) {
+  .main > .wrapper {
+    max-width: 500px;
+    flex-direction: column;
+    justify-content: center;
+    gap: 50px;
+  }
+  .main > .wrapper > div:nth-child(1) {
+    flex: 0;
+    text-align: center;
+  }
+
+  .main > .wrapper > div:nth-child(2) {
+    flex: 0;
+  }
+}

@@ -26,7 +26,7 @@ const verifyPassword = () => {
   let password = document.querySelector("#password").value;
   let passworderror = document.querySelector(".password-error");
   if (password === "") {
-    passworderror.textContent = "Please specify an email or a tel number";
+    passworderror.textContent = "Please specify a password";
     return false;
   }
   if (password.length < 6) {

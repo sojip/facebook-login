@@ -2,7 +2,6 @@
 :root {
   --wrapper-max-width: 1000px;
   --gray-color: #e9ebee;
-  /* --blue-color: #4267b3; */
   --blue-color: #1877f2;
   --white-blue-color: #4e71ba;
   --green-color: #42b72a;
@@ -85,6 +84,11 @@ body {
   outline-color: var(--blue-color);
   caret-color: var(--blue-color);
   font-size: 1.1rem;
+}
+
+.email-error,
+.password-error {
+  color: red;
 }
 
 .signin-wrapper form input[type="submit"] {
